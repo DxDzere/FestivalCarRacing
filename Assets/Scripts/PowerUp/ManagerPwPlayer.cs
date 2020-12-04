@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ManagerPwPlayer : MonoBehaviour
 {
     public GameObject[] PowerUps;
-    public GameObject imageItem,      Imagen_Item;
+    public GameObject Imagen_Item, imgtxt;
     public GameObject escudo;
     bool escudoAct = false;
     int x = 4;
@@ -25,11 +25,12 @@ public class ManagerPwPlayer : MonoBehaviour
         float Posz = gameObject.transform.position.z;
         Quaternion rotation = new Quaternion();
         Vector3 positionObstaculo = new Vector3(Posx, Posy, Posz);
+
         switch (x)
         {
             case 0:
-                imageItem.GetComponent<TextMeshProUGUI>().text = "Charco";
                 Imagen_Item.GetComponent<Image>().sprite = Resources.Load<Sprite>("4");
+                imgtxt.SetActive(false);
                 if (Input.GetKey("x"))
                 {
                     Instantiate(PowerUps[0], positionObstaculo, rotation);
@@ -37,8 +38,8 @@ public class ManagerPwPlayer : MonoBehaviour
                 }
                 break;
             case 1:
-                imageItem.GetComponent<TextMeshProUGUI>().text = "Proyectil";
                 Imagen_Item.GetComponent<Image>().sprite = Resources.Load<Sprite>("3");
+                imgtxt.SetActive(false);
                 if (Input.GetKey("x"))
                 {
                     Instantiate(PowerUps[1], positionObstaculo, rotation);
@@ -46,8 +47,8 @@ public class ManagerPwPlayer : MonoBehaviour
                 }
                 break;
             case 2:
-                imageItem.GetComponent<TextMeshProUGUI>().text = "Escudo";
                 Imagen_Item.GetComponent<Image>().sprite = Resources.Load<Sprite>("2");
+                imgtxt.SetActive(false);
                 if (Input.GetKey("x"))
                 {
                     Instantiate(PowerUps[2], positionObstaculo, rotation);
@@ -58,14 +59,16 @@ public class ManagerPwPlayer : MonoBehaviour
                 }
                 break;
             case 3:
-                imageItem.GetComponent<TextMeshProUGUI>().text = "Tele-Proyectil";
                 Imagen_Item.GetComponent<Image>().sprite = Resources.Load<Sprite>("3");
-
-                //
-                //
+                imgtxt.SetActive(false);
+                if (Input.GetKey("x"))
+                {
+                    Instantiate(PowerUps[1], positionObstaculo, rotation);
+                    x = 4;
+                }
                 break;
             case 4:
-                imageItem.GetComponent<TextMeshProUGUI>().text = "No item";
+                imgtxt.SetActive(true);
                 Imagen_Item.GetComponent<Image>().sprite = Resources.Load<Sprite>("0");
                 break;
         }
@@ -73,11 +76,15 @@ public class ManagerPwPlayer : MonoBehaviour
         if(escudoAct == true && x == 4)
         {
             timer -= Time.deltaTime;
-            if (timer < 0)
+            Debug.Log(timer);
+            if (timer <= 0)
             {
-                Debug.Log("Etapa3");
-                escudo.SetActive(false);
+
+                //Debug.Log("Etapa3");
+
                 timer = 3;
+                escudo.SetActive(false);
+                escudoAct = false;
             }
         }
     }
@@ -88,8 +95,12 @@ public class ManagerPwPlayer : MonoBehaviour
         if (Colider.gameObject.tag == "PoweUp")
         {
             Debug.Log("hola");
-            x = Random.Range(0, 4);
+            x = Random.Range(0, 3);
             Debug.Log(x);
+            if(x == 4)
+            {
+                x = 0;
+            }
         }
 
     }
