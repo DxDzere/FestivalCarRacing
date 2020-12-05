@@ -20,6 +20,11 @@ public class Player : MonoBehaviour
     [Header("Parameters")]
     public float acceleration = 30f;
     public float steering = 80f;
+
+    [Header("Sound Effects")]
+    public AudioClip audioMotor;
+    public float volumen = 1.0f;
+
     // Start is called before the first frame update
     void Start()
     {

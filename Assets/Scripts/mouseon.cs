@@ -12,7 +12,7 @@ public class mouseon : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         cuadrado.transform.position = this.transform.position;
-        Bipi.GetComponent<AudioSource>().Play();
+        AudioManager.instance.PlaySound2D("botones");
     }
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
