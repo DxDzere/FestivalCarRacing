@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MENU_PRINCIPAL.unity
+    guid: 787c87379681be4428b5de961b524880
+  - enabled: 1
+    path: Assets/Scenes/Pista_Halloween.unity
+    guid: 8e416f2003a93a64e9f0c004d13ef82a
   m_configObjects: {}

@@ -58,9 +58,12 @@ public class CambioDeEcene : MonoBehaviour {
 
     public void ScreenSettings()
     {
-        mainMenuHolder.SetActive(false);
-        playerSelectionHolder.SetActive(false);
         optionsMenuHolder.SetActive(true);
+    }
+
+    public void CloseScreenSettings()
+    {
+        optionsMenuHolder.SetActive(false);
     }
 
     public void SetScreenResolution (int i)

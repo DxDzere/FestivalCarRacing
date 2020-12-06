@@ -32,7 +32,7 @@ public class VerificadorVuelta : MonoBehaviour
         {
             if (VueltaN <= 3)
             {
-                Text.GetComponent<TextMeshProUGUI>().text = "Vuelta: " + VueltaN + "/ 3";
+                Text.GetComponent<TextMeshProUGUI>().text = VueltaN + "/3";
             }
             else
             {
