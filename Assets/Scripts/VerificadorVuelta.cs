@@ -46,6 +46,7 @@ public class VerificadorVuelta : MonoBehaviour
                 Mostrar_Parcial = false;
                 if (Parcial[VueltaN] == "" && VueltaN > 0)
                 {
+                    AudioManager.instance.PlaySound2D("Checkpoint");
                     TParcial[VueltaN].GetComponent<TextMeshProUGUI>().text = TIEMPO.CopiaTiempo;
                     TParcial[VueltaN].SetActive(true);
                     TParcial[VueltaN].GetComponent<Animator>().Rebind();
@@ -61,6 +62,7 @@ public class VerificadorVuelta : MonoBehaviour
                 }
                 if (VueltaN > 1)
                 {
+                    AudioManager.instance.PlaySound2D("Meta");
                     TParcial[VueltaN - 1].GetComponent<TextMeshProUGUI>().text = TIEMPO.CopiaTiempo;
                     TParcial[VueltaN - 1].SetActive(true);
                     TParcial[VueltaN - 1].GetComponent<Animator>().Rebind();

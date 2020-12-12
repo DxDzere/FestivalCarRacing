@@ -34,6 +34,7 @@ public class CambioDeEcene : MonoBehaviour {
 
     public void Play ()
     {
+        AudioManager.instance.PlaySound2D("Play");
         SceneManager.LoadScene("Pista_Halloween");
     }
 
@@ -44,6 +45,7 @@ public class CambioDeEcene : MonoBehaviour {
 
     public void ScreenMainMenu()
     {
+        AudioManager.instance.PlaySound2D("Retroceder_Menu");
         mainMenuHolder.SetActive(true);
         playerSelectionHolder.SetActive(false);
         optionsMenuHolder.SetActive(false);
@@ -51,6 +53,7 @@ public class CambioDeEcene : MonoBehaviour {
 
     public void ScreenPlayerSelection()
     {
+        AudioManager.instance.PlaySound2D("Avanzar_Menu");
         mainMenuHolder.SetActive(false);
         playerSelectionHolder.SetActive(true);
         optionsMenuHolder.SetActive(false);
@@ -58,11 +61,13 @@ public class CambioDeEcene : MonoBehaviour {
 
     public void ScreenSettings()
     {
+        AudioManager.instance.PlaySound2D("Boton_Opciones");
         optionsMenuHolder.SetActive(true);
     }
 
     public void CloseScreenSettings()
     {
+        AudioManager.instance.PlaySound2D("Boton_Opciones");
         optionsMenuHolder.SetActive(false);
     }
 

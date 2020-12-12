@@ -33,6 +33,7 @@ public class ManagerPwPlayer : MonoBehaviour
                 imgtxt.SetActive(false);
                 if (Input.GetKey("x"))
                 {
+                    AudioManager.instance.PlaySound2D("Soltar_Aceite");
                     Instantiate(PowerUps[0], positionObstaculo, rotation);
                     x = 4;
                 }
@@ -42,6 +43,7 @@ public class ManagerPwPlayer : MonoBehaviour
                 imgtxt.SetActive(false);
                 if (Input.GetKey("x"))
                 {
+                    AudioManager.instance.PlaySound2D("Disparar");
                     Instantiate(PowerUps[1], positionObstaculo, rotation);
                     x = 4;
                 }
@@ -51,6 +53,7 @@ public class ManagerPwPlayer : MonoBehaviour
                 imgtxt.SetActive(false);
                 if (Input.GetKey("x"))
                 {
+                    AudioManager.instance.PlaySound2D("Activar_Escudo");
                     Instantiate(PowerUps[2], positionObstaculo, rotation);
                     escudo.SetActive(true);
                     escudoAct = true;
@@ -63,6 +66,7 @@ public class ManagerPwPlayer : MonoBehaviour
                 imgtxt.SetActive(false);
                 if (Input.GetKey("x"))
                 {
+                    AudioManager.instance.PlaySound2D("Disparar");
                     Instantiate(PowerUps[1], positionObstaculo, rotation);
                     x = 4;
                 }
@@ -83,9 +87,10 @@ public class ManagerPwPlayer : MonoBehaviour
                 //Debug.Log("Etapa3");
 
                 timer = 3;
+                AudioManager.instance.PlaySound2D("Desactivar_Escudo");
                 escudo.SetActive(false);
                 escudoAct = false;
-            }
+            } 
         }
     }
 
@@ -94,7 +99,7 @@ public class ManagerPwPlayer : MonoBehaviour
     {
         if (Colider.gameObject.tag == "PoweUp")
         {
-            Debug.Log("hola");
+            AudioManager.instance.PlaySound2D("Recoger_PowerUp");
             x = Random.Range(0, 3);
             Debug.Log(x);
             if(x == 4)

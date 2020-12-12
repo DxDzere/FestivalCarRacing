@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        groundDetection = new GroundDetection(_groundDetector, layer, 1.0f); 
+        groundDetection = new GroundDetection(_groundDetector, layer, 1.0f);
     }
 
     // Update is called once per frame

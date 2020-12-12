@@ -1,0 +1,169 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2084420067628999129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081910347297398101}
+  - component: {fileID: 5971180335229678667}
+  - component: {fileID: 632782767157155812}
+  - component: {fileID: 3866752744949850247}
+  m_Layer: 0
+  m_Name: Audio Manager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2081910347297398101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084420067628999129}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -13}
+  m_LocalScale: {x: 1, y: 0.8999995, z: 1}
+  m_Children:
+  - {fileID: 2082235217760561209}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5971180335229678667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084420067628999129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9976c308c861e4b8dfa85d287a511b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &632782767157155812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084420067628999129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710ccfc2521670b4e8a61071e53687ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainTheme: {fileID: 8300000, guid: 69edd67c0ef4e0a4d8e6af4c54be4085, type: 3}
+  menuTheme: {fileID: 8300000, guid: 95ea75e63b20c1248a4918a5a3860697, type: 3}
+  mapaTheme: {fileID: 8300000, guid: eb2548824c116fb4fa5b98086d4c4d2c, type: 3}
+--- !u!114 &3866752744949850247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084420067628999129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0604ff8dc0dd52d4bb86081c30f624dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundGroups:
+  - groupID: Auto_Quieto
+    group:
+    - {fileID: 8300000, guid: 4ba72e882117c5945a761a696ed1ce1e, type: 3}
+  - groupID: Play
+    group:
+    - {fileID: 8300000, guid: 6e9c020a0bd2aa4458e7f0b75c4804ad, type: 3}
+  - groupID: Meta
+    group:
+    - {fileID: 8300000, guid: f8dd8f56a279c8847a14e8a44a0ea39e, type: 3}
+  - groupID: Cuenta_Regresiva
+    group:
+    - {fileID: 8300000, guid: 332f7def869ff234bb7421028ea261a3, type: 3}
+  - groupID: Checkpoint
+    group:
+    - {fileID: 8300000, guid: 0b95ecaf08dc9c849871bdab318bd800, type: 3}
+  - groupID: Avanzar_Menu
+    group:
+    - {fileID: 8300000, guid: 1e4e334814582e54ea69263e974b5a17, type: 3}
+  - groupID: Boton_Opciones
+    group:
+    - {fileID: 8300000, guid: b72e5bfbe84e9394e8e292220a790172, type: 3}
+  - groupID: Cartel_Alerta
+    group:
+    - {fileID: 8300000, guid: 30cfd9832d1e66e44bb69c68923d9e5f, type: 3}
+  - groupID: Retroceder_Menu
+    group:
+    - {fileID: 8300000, guid: 244452ae73b78cb4d8cca267e92ba79e, type: 3}
+  - groupID: Activar_Escudo
+    group:
+    - {fileID: 8300000, guid: 9fe624982c85ccc48a7c9f7873789128, type: 3}
+  - groupID: Desactivar_Escudo
+    group:
+    - {fileID: 8300000, guid: ea163063ab133434c9500bb09dc3fedb, type: 3}
+  - groupID: Disparar
+    group:
+    - {fileID: 8300000, guid: 7b26ab559ff454e46893ef48216de811, type: 3}
+  - groupID: Explosion
+    group:
+    - {fileID: 8300000, guid: 2a98bef8d99110148900dbe004e92f77, type: 3}
+  - groupID: Pisar_Aceite
+    group:
+    - {fileID: 8300000, guid: 7a73d446863396a46967aeb8a3ea9339, type: 3}
+  - groupID: Soltar_Aceite
+    group:
+    - {fileID: 8300000, guid: 1050a995dddc6d946870d9be8fa37b31, type: 3}
+  - groupID: Turbo
+    group:
+    - {fileID: 8300000, guid: e3e16020b4193ed458ff7116d03f54ba, type: 3}
+  - groupID: Recoger_PowerUp
+    group:
+    - {fileID: 8300000, guid: 9b2896ef39ff54342a42a04e6da46a58, type: 3}
+  - groupID: Botones
+    group:
+    - {fileID: 8300000, guid: d10fc252ef5103949a136aa237a8d63a, type: 3}
+--- !u!1 &2084668020806496683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2082235217760561209}
+  - component: {fileID: 2146870701851788477}
+  m_Layer: 0
+  m_Name: Audio Listener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2082235217760561209
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084668020806496683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2081910347297398101}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &2146870701851788477
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084668020806496683}
+  m_Enabled: 1

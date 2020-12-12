@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\APAGAR1.cs" />
      <Compile Include="Assets\Scripts\PowerUp\ManagerPowerUp.cs" />
      <Compile Include="Assets\Scripts\Borrar.cs" />
+     <Compile Include="Assets\Scripts\SonidoBoton.cs" />
      <Compile Include="Assets\Scripts\PowerUp\PwEscudo.cs" />
      <Compile Include="Assets\Scripts\Music Manager\SoundLibrary.cs" />
      <Compile Include="Assets\AllSkyFree\AllSkyFree_Menu.cs" />
