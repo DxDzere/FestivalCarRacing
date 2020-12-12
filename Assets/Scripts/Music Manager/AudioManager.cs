@@ -89,10 +89,10 @@ public class AudioManager : MonoBehaviour {
         PlayerPrefs.Save();
     }
 
-    public void PlayMusic(AudioClip clip, float fadeDuration = 1)
+    public void PlayMusic(string soundName, float fadeDuration = 1)
     {
         activeMusicSourceIndex = 1 - activeMusicSourceIndex;
-        musicSouces[activeMusicSourceIndex].clip = clip;
+        musicSouces[activeMusicSourceIndex].clip = library.GetClipFromName(soundName);
         musicSouces[activeMusicSourceIndex].Play();
 
         StartCoroutine(AnimateMusicCrossfade(fadeDuration));
@@ -126,5 +126,10 @@ public class AudioManager : MonoBehaviour {
             musicSouces[1-activeMusicSourceIndex].volume = Mathf.Lerp(musicVolumePercent * masterVolumePercent,0, percent);
             yield return null;
         }
+    }
+
+    public void PararMusica()
+    {
+        musicSouces[activeMusicSourceIndex].Stop();
     }
 }

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2081910347297398101}
   - component: {fileID: 5971180335229678667}
-  - component: {fileID: 632782767157155812}
   - component: {fileID: 3866752744949850247}
   m_Layer: 0
   m_Name: Audio Manager 1
@@ -46,21 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9976c308c861e4b8dfa85d287a511b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &632782767157155812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084420067628999129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 710ccfc2521670b4e8a61071e53687ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainTheme: {fileID: 8300000, guid: 69edd67c0ef4e0a4d8e6af4c54be4085, type: 3}
-  menuTheme: {fileID: 8300000, guid: 95ea75e63b20c1248a4918a5a3860697, type: 3}
-  mapaTheme: {fileID: 8300000, guid: eb2548824c116fb4fa5b98086d4c4d2c, type: 3}
 --- !u!114 &3866752744949850247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +112,15 @@ MonoBehaviour:
   - groupID: Botones
     group:
     - {fileID: 8300000, guid: d10fc252ef5103949a136aa237a8d63a, type: 3}
+  - groupID: Main_Music
+    group:
+    - {fileID: 8300000, guid: 69edd67c0ef4e0a4d8e6af4c54be4085, type: 3}
+  - groupID: Personaje_Music
+    group:
+    - {fileID: 8300000, guid: 69cc6e2861d5b2e47ad543c5985f95cf, type: 3}
+  - groupID: Mapa_Music
+    group:
+    - {fileID: 8300000, guid: eb2548824c116fb4fa5b98086d4c4d2c, type: 3}
 --- !u!1 &2084668020806496683
 GameObject:
   m_ObjectHideFlags: 0

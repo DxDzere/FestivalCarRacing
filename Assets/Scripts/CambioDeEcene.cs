@@ -17,6 +17,7 @@ public class CambioDeEcene : MonoBehaviour {
 
    void Start()
     {
+        AudioManager.instance.PlayMusic("Main_Music");
         activeScreenResIndex = PlayerPrefs.GetInt("screen res index");
         bool isFullscreen = (PlayerPrefs.GetInt("fullscreen") == 1) ? true : false;
 
@@ -35,6 +36,8 @@ public class CambioDeEcene : MonoBehaviour {
     public void Play ()
     {
         AudioManager.instance.PlaySound2D("Play");
+        AudioManager.instance.PararMusica();
+        AudioManager.instance.PlayMusic("Mapa_Music");
         SceneManager.LoadScene("Pista_Halloween");
     }
 
@@ -45,6 +48,8 @@ public class CambioDeEcene : MonoBehaviour {
 
     public void ScreenMainMenu()
     {
+        AudioManager.instance.PararMusica();
+        AudioManager.instance.PlayMusic("Main_Music");
         AudioManager.instance.PlaySound2D("Retroceder_Menu");
         mainMenuHolder.SetActive(true);
         playerSelectionHolder.SetActive(false);
@@ -53,6 +58,8 @@ public class CambioDeEcene : MonoBehaviour {
 
     public void ScreenPlayerSelection()
     {
+        AudioManager.instance.PararMusica();
+        AudioManager.instance.PlayMusic("Personaje_Music");
         AudioManager.instance.PlaySound2D("Avanzar_Menu");
         mainMenuHolder.SetActive(false);
         playerSelectionHolder.SetActive(true);
